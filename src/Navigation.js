@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FaUsers } from 'react-icons/fa';
 import { Link } from '@reach/router';
 
+import './Navigation.css';
+
 class Navigation extends Component {
   render() {
     const { user, logOutUser } = this.props;
@@ -15,17 +17,17 @@ class Navigation extends Component {
           <div className="navbar-nav ml-auto">
             {user && (
               <Link className="nav-item nav-link" to="/meetings">
-                meetings
+                Meetings
               </Link>
             )}
             {!user && (
               <Link className="nav-item nav-link" to="/login">
-                log in
+                Log In
               </Link>
             )}
             {!user && (
               <Link className="nav-item nav-link" to="/register">
-                register
+                Register
               </Link>
             )}
             {user && (
@@ -34,7 +36,7 @@ class Navigation extends Component {
                 to="/login"
                 onClick={e => logOutUser(e)}
               >
-                log out
+                Log Out
               </Link>
             )}
           </div>

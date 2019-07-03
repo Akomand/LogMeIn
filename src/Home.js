@@ -12,7 +12,7 @@ class Home extends Component {
     };
 
     return (
-      <body id="back">
+      <body>
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-10 col-md-10 col-lg-8 col-xl-7">
