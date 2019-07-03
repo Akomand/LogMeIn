@@ -31,7 +31,7 @@ class Checkin extends React.Component {
             attendeeEmail: this.state.email,
             star: false
         });
-        navigate(`attendees/${this.props.userID}/${this.props.meetingID}`);
+        navigate(`/attendees`);
     }
 
 

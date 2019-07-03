@@ -9,7 +9,7 @@ class Navigation extends Component {
     return (
       <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
+          <Link to={user ? "/meetings" : "/"} className="navbar-brand">
             <FaUsers className="mr-1" /> LogMeIn
           </Link>
           <div className="navbar-nav ml-auto">
