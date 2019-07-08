@@ -3,7 +3,7 @@
 ## What is this app all about?
 
 LogMeIn is a web application designed for scheduling, organizing, and managing important meetings. 
-Visit [here](logmein.surge.sh) to register now and make your meetings easier to manage!
+Visit [here](http://logmein.surge.sh) to register now and make your meetings easier to manage!
 
 ## What is this app written in?
 
