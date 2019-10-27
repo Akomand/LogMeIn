@@ -22,23 +22,24 @@ class Home extends Component {
                   fontSize: 2.8 + 'em'
                 }}
               >
-                LogMeIn
+                Event Run
               </div>
               {user == null && (
               <p className="lead" style={biggerLead}>
-                Welcome to LogMeIn! Need to organize your work meetings? 
-                You're at the perfect place. LogMeIn allows you to create, organize,
-                and manage meetings! Better yet, LogMeIn has a check-in feature where 
-                users can be checked into meetings. Make planning your meetings a breeze 
-                by registering now!
+                Welcome to EventRun! Need to spread the word about your business or
+                event? Are you a job seeker looking for your next big break? 
+                You're at the right place! EventRun helps local businesses and 
+                non-profit organizations incentivize participation in events! 
+                Attend these events to earn points and redeem prizes. Register now!
               </p>)}
 
               {user && (
               <p className="lead" style={biggerLead}>
-                Welcome {userName}! Need to organize your work meetings? 
-                You're at the perfect place. LogMeIn allows you to create, organize,
-                and manage meetings! Better yet, LogMeIn has a check-in feature where 
-                users can be checked into meetings. Click below to manage your meetings!
+                Welcome to EventRun, {userName}! Need to spread the word about your business or
+                event? Are you a job seeker looking for your next big break? 
+                You're at the right place! EventRun helps local businesses and 
+                non-profit organizations incentivize participation in events! 
+                Attend these events to earn points and redeem prizes!
               </p>)}
 
                 {user == null && (

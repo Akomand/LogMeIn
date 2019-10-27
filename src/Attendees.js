@@ -27,7 +27,8 @@ class Attendees extends React.Component {
                     attendeeID: item,
                     attendeeName: attendees[item].attendeeName,
                     attendeeEmail: attendees[item].attendeeEmail,
-                    star: attendees[item].star
+                    star: attendees[item].star,
+                    userPoints: attendees[item].userPoints
                 });
             }
             this.setState({

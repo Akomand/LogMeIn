@@ -29,9 +29,10 @@ class Checkin extends React.Component {
         ref.push({
             attendeeName: this.state.displayName,
             attendeeEmail: this.state.email,
-            star: false
+            star: false,
+            userPoints: 0
         });
-        navigate(`/attendees`);
+        navigate(`/meetings`);
     }
 
 

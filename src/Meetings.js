@@ -31,7 +31,7 @@ class Meetings extends React.Component {
             <div className="container mt-4">
                 <div className="row justify-content-center">
                     <div className="col-md-8 text-center">
-                    <h1 className="font-weight-light">Add a Meeting</h1>
+                    <h1 className="font-weight-light">Add an Event</h1>
                     <div className="card bg-light">
                         <div className="card-body text-center">
                         <form
@@ -43,7 +43,7 @@ class Meetings extends React.Component {
                                 type="text"
                                 className="form-control"
                                 name="meetingName"
-                                placeholder="Meeting name"
+                                placeholder="Event name"
                                 aria-describedby="buttonAdd"
                                 value={this.state.meetingName}
                                 onChange={this.handleChange}
@@ -66,7 +66,7 @@ class Meetings extends React.Component {
                         <div className="card border-top-0 rounder-0">
                             {this.props.meetings && this.props.meetings.length ? (
                                 <div className="card-body py-2">
-                                    <h4 className="card-title font-weight-light m-0">Your Meetings</h4>
+                                    <h4 className="card-title font-weight-light m-0">Events</h4>
                                 </div>
                             ): null}
                             {this.props.meetings && (

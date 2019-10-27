@@ -6,18 +6,23 @@ import './Navigation.css';
 
 class Navigation extends Component {
   render() {
-    const { user, logOutUser } = this.props;
+    const { user, logOutUser, userPoints } = this.props;
 
     return (
       <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
         <div className="container-fluid">
-          <Link to={user ? "/meetings" : "/"} className="navbar-brand">
-            <FaUsers className="mr-1" /> LogMeIn
+          <Link to={user ? "/" : "/"} className="navbar-brand">
+            <FaUsers className="mr-1" /> Event Run
           </Link>
           <div className="navbar-nav ml-auto">
             {user && (
               <Link className="nav-item nav-link" to="/meetings">
-                Meetings
+                {this.props.userPoints}
+              </Link>
+            )}
+            {user && (
+              <Link className="nav-item nav-link" to="/meetings">
+                Events
               </Link>
             )}
             {!user && (

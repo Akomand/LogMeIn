@@ -17,7 +17,7 @@ class AttendeesList extends Component {
       ref.remove();
   }
 
-  toggleStar(e, star, whichMeeting, whichAttendee) {
+  toggleStar(e, star, whichMeeting, whichAttendee, userPoints) {
       e.preventDefault();
       const adminUser = this.props.adminUser;
       const ref = firebase
@@ -29,6 +29,23 @@ class AttendeesList extends Component {
       } else {
           ref.set(!star);
       }
+
+      //this.setState({userPoints: 150});
+  }
+
+  updatePoints(e, star, whichMeeting, whichAttendee, userPoints) {
+    e.preventDefault();
+    const adminUser = this.props.adminUser;
+    const ref = firebase
+    .database()
+    .ref(`meetings/${adminUser}/${whichMeeting}/attendees/${whichAttendee}/userPoints`);
+
+    /*if(star === true) {
+        ref.set(userPoints);
+    } else {
+        ref.set(userPoints);
+    }*/
+    ref.set(userPoints);
   }
 
   render() {
@@ -48,8 +65,11 @@ class AttendeesList extends Component {
                                 (item.star ? 'btn-info' : 'btn-outline-secondary')}
                                 title="Give user a star" 
                                 onClick = {e => 
-                                this.toggleStar(e, item.star, this.props.meetingID, item.attendeeID
-                                )}>
+                                this.toggleStar(e, item.star, this.props.meetingID, item.attendeeID,
+                                item.userPoints)}
+                                onToggle = {e => 
+                                    this.updatePoints(e, item.star, this.props.meetingID, item.attendeeID,
+                                    item.userPoints)}>
                                     <GoStar />
                                 </button>
                                 <a href={`mailto:${item.attendeeEmail}`}
